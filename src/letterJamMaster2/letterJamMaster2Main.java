@@ -57,6 +57,7 @@ public class letterJamMaster2Main {
 			}
 			scoreOrder[0][indexWordInList] = tempScore;
 			scoreOrder[1][indexWordInList] = indexWordInList;
+			System.out.println("adding a score of " + tempScore + " to " + wordList.get(indexWordInList));
 			tempScore = 0;
 		}
 		
@@ -70,8 +71,9 @@ public class letterJamMaster2Main {
 		sort2DMatrixbycolumn.sortbyColumn(scoreOrder, 0);
 		
 //		print it and hope it works
+		System.out.print("Printing results");
 		
-		for(int printIndex = 0; printIndex < 600; printIndex++) {
+		for(int printIndex = 0; printIndex < 10; printIndex++) {
 			System.out.print(wordList.get(scoreOrder[1][printIndex]));
 			System.out.print(scoreOrder[0][printIndex]);
 			System.out.println();
